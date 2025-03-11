@@ -1,0 +1,99 @@
+<div
+  style="
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    height: 100dvh;
+  "
+>
+  <header id="header">
+    <div class="logo">
+      <img class="pokeball-logo" src="../../assets/pokemoPNG.png" alt="" />
+      <img class="text-logo" src="../../assets/text-logo.png" alt="" />
+    </div>
+
+    <div style="display: flex; gap: 1rem; align-items: center">
+      <input
+        type="text"
+        style="height: 2rem; padding: 1rem; text-size-adjust: 24; width: 20rem"
+        class="medium"
+        [(ngModel)]="search"
+        (keydown.enter)="searchFn()"
+      />
+      <p>
+        <img
+          style="width: 2rem"
+          src="../../assets/lens.png"
+          alt=""
+          (click)="searchFn()"
+        />
+      </p>
+    </div>
+    <div>
+      <img
+        id="pokebag"
+        routerLink="/pokebag"
+        src="../../assets/pokebag.png"
+        alt=""
+      />
+    </div>
+  </header>
+
+  <main>
+    <div class="pokemon-cards">
+      <div class="pokemon-wrap">
+        @for (item of pokes(); track $index) {
+        <app-pokemon-info [pokemonName]="item" />
+        }@empty {
+        <p class="medium">no pokemons found</p>
+        }
+      </div>
+      @if(!isSearching){
+      <div
+        style="
+          margin-top: 3rem;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+        "
+      >
+        <button (click)="prevPage()" class="buttons">
+          <img
+            src="../../assets/left-chevron.png"
+            width="35"
+            alt="previus page button"
+          />
+        </button>
+
+        <button (click)="nextPage()" class="buttons">
+          <img
+            src="../../assets/chevron.png"
+            width="35"
+            alt="next page button"
+          />
+        </button>
+      </div>
+      }
+    </div>
+
+    <div class="filter-section">
+      <div class="condensed" style="font-size: 26px">Filters</div>
+      <div class="filter-types condensed">
+        @for (item of pokeTypes; track $index) {
+        <div class="cb">
+          <input
+            type="checkbox"
+            [value]="item.type"
+            (change)="onCheckboxChange($event)"
+            [checked]="
+              isFiltering && item.type === filteredTypes() ? true : false
+            "
+          />
+          <p>{{ item.label }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </main>
+</div>

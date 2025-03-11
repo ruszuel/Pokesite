@@ -1,0 +1,44 @@
+<div class="card">
+  <div class="card-header condensed">
+    <p style="font-size: 26px; text-transform: capitalize">
+      {{ pokemonName() }}
+    </p>
+    <div style="display: flex; align-items: center; gap: 3px">
+      <p>
+        HP<span style="font-size: 26px">{{ hp()[0] }}</span>
+      </p>
+      <img
+        [ngSrc]="'../../../assets/' + types()[0] + '.svg'"
+        width="40"
+        height="40"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="img-holder">
+    @if(image()){
+    <img [ngSrc]="image()" width="160" height="160" alt="" priority />
+    }
+  </div>
+
+  <div [class]="`card-footer ${types()[0]}`">
+    <div class="price">
+      <p class="medium" style="font-size: 18px">
+        atk: <span class="condensed">{{ hp()[1] }}</span>
+      </p>
+      <p class="medium" style="font-size: 18px">
+        def: <span class="condensed">{{ hp()[2] }}</span>
+      </p>
+      <p class="medium" style="font-size: 18px">
+        spd: <span class="condensed">{{ hp()[5] }}</span>
+      </p>
+    </div>
+    <div>
+      <button class="to-bag" (click)="addToBag()">
+        <p class="medium" style="font-size: 14px">Catch!</p>
+        <img style="width: 1rem" src="../../../assets/Poke_Ball.webp" alt="" />
+      </button>
+    </div>
+  </div>
+</div>

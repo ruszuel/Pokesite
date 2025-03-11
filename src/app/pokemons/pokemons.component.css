@@ -1,0 +1,96 @@
+.pokeball-logo{
+    width: 4rem;
+    rotate: -10deg;
+}
+
+.text-logo{
+    position: relative;
+    top: 1.9rem;
+    left: -2.5rem;
+    height: 3rem;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+}
+
+#header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding-inline: 3rem;
+    flex: 0.08;
+    margin-bottom: 2rem;
+}
+
+#pokebag {
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.pokemons {
+    width: 12rem;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+    flex: 1;
+}
+
+.pokemon-cards {
+    flex: .9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pokemon-wrap {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.filter-section{
+    flex: .1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cb {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-types {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+input[type='checkbox'] {
+    border: 2px solid black;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 2.5rem;
+    border: 1px solid black;
+    border-radius: 10%;
+    height: 2.5rem;
+    background-color: white;
+}

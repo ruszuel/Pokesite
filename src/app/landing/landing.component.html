@@ -1,0 +1,49 @@
+<div class="logo">
+  <img class="pokeball-logo" src="../../assets/pokemoPNG.png" alt="" />
+  <img class="text-logo" src="../../assets/text-logo.png" alt="" />
+  <p class="condensed" style="text-align: center; font-size: 2rem">
+    Bag 'em all!
+  </p>
+</div>
+
+<div class="slider-holder">
+  @for (item of sliders(); track item.id) {
+  <article
+    class="cards"
+    [class]="{
+      grass: item.type === 'Grass',
+      fire: item.type === 'Fire',
+      water: item.type === 'Water',
+      electric: item.type === 'Electric',
+      normal: item.type === 'Normal'
+    }"
+  >
+    <div class="content-holder">
+      <div class="logo-type">
+        <img
+          style="width: 3rem"
+          [src]="[`../../assets/${item.symbol}`]"
+          alt=""
+        />
+        <p class="condensed" style="font-size: 26px">{{ item.type }} Type</p>
+      </div>
+      <p class="medium">See more →</p>
+    </div>
+    <img style="width: 18rem" [src]="[`../../assets/${item.pokemon}`]" alt="" />
+  </article>
+  }
+</div>
+
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  "
+  (click)="onClick()"
+>
+  <div class="button">
+    <p>See all Pokemons</p>
+  </div>
+</div>

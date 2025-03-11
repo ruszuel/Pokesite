@@ -1,0 +1,145 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17rem;
+    background-color: #D9D9D9;
+    backdrop-filter: blur(4px);
+    height: 20rem;
+    border-radius: 5px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.img-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+        filter: drop-shadow(16px 10px 3px #898994);
+    }
+}
+
+.card-footer {
+    height: 5rem;
+    padding: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.energy {
+    width: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-around;
+}
+
+.to-bag {
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    align-items: center;
+    width: fit-content;
+    justify-self: end;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.to-bag:hover {
+    background-color: #c6c6c7;
+    transform: translateY(-2px);
+    box-shadow: -3px 5px #9e979780;
+}
+
+.to-bag:active{
+    background-color: #9e9797;
+    box-shadow: 0 0px #d9d9d9;
+    transform: translateY(2px);
+}
+
+.grass {
+    background: linear-gradient(120deg,#aad391,#586D4B);
+}
+
+.fire {
+    background: linear-gradient(120deg,#DD9852,#77522C);
+}
+
+.water {
+    background: linear-gradient(120deg,#78C0C9,#3B5F63);
+}
+
+.electric {
+    background: linear-gradient(120deg,#DC9621,#765012);
+}
+
+.normal {
+    background: linear-gradient(120deg,#C3A683,#5D4F3E);
+}
+
+.steel {
+    background: linear-gradient(120deg,#74B0CB,#476B7B);
+}
+
+.rock {
+    background: linear-gradient(120deg,#A9A481,#63604D);
+}
+
+.fairy {
+    background: linear-gradient(120deg,#E18CE1,#935A93);
+}
+
+.flying {
+    background: linear-gradient(120deg,#74AAD0,#3B576A);
+}
+
+.bug {
+    background: linear-gradient(120deg,#9F9F28,#727218);
+}
+
+.poison {
+    background: linear-gradient(120deg,#A96FDD,#713E9E);
+}
+
+.dragon {
+    background: linear-gradient(120deg,#90A7F1,#445794);
+}
+
+.psychic {
+    background: linear-gradient(120deg,#E96C8C,#AB5067);
+}
+
+.dark {
+    background: linear-gradient(120deg,#B5A3A3,#736868);
+}
+
+.ghost {
+    background: linear-gradient(120deg,#D484D6,#885889);
+}
+
+.fighting {
+    background: linear-gradient(120deg,#E49021,#966018);
+}
+
+.ground {
+    background: linear-gradient(120deg,#A4733C,#704E28);
+}
+
+.ice {
+    background: linear-gradient(120deg,#47C8C8,#297373);
+}
