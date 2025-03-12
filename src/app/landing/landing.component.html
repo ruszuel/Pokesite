@@ -1,3 +1,8 @@
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+/>
+
 <div class="logo">
   <img class="pokeball-logo" src="../../assets/pokemoPNG.png" alt="" />
   <img class="text-logo" src="../../assets/text-logo.png" alt="" />
@@ -6,10 +11,10 @@
   </p>
 </div>
 
-<div class="slider-holder">
+<div #carousel class="carousel">
   @for (item of sliders(); track item.id) {
   <article
-    class="cards"
+    class="cards carousel-cell"
     [class]="{
       grass: item.type === 'Grass',
       fire: item.type === 'Fire',
@@ -27,7 +32,7 @@
         />
         <p class="condensed" style="font-size: 26px">{{ item.type }} Type</p>
       </div>
-      <p class="medium">See more →</p>
+      <p class="medium" style="cursor: pointer">See more →</p>
     </div>
     <img style="width: 18rem" [src]="[`../../assets/${item.pokemon}`]" alt="" />
   </article>
